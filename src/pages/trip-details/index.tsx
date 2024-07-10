@@ -2,6 +2,7 @@ import { Calendar, CircleCheck, MapPin, Plus, Settings2 } from 'lucide-react'
 import { useState } from 'react'
 
 import { CreateActivityModal } from './create-activity-modal'
+import { Guests } from './guests'
 import { ImportantLinks } from './important-links'
 
 export function TripDetailsPage() {
@@ -83,7 +84,12 @@ export function TripDetailsPage() {
             </div>
           </div>
         </div>
-        <ImportantLinks />
+
+        <div className="w-80 space-y-6">
+          <ImportantLinks />
+          <div className="h-px w-full bg-zinc-800" />
+          <Guests />
+        </div>
       </main>
 
       {isCreateActivityModalOpen && (

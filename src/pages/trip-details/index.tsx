@@ -6,12 +6,24 @@ import {
   MapPin,
   Plus,
   Settings2,
+  Tag,
   UserCog,
+  X,
 } from 'lucide-react'
-
-// TODO: pause class video > 48:23
+import { useState } from 'react'
 
 export function TripDetailsPage() {
+  const [isCreateActivityModalOpen, setIsCreateActivityModalOpen] =
+    useState(false)
+
+  function openCreateActivityModal() {
+    setIsCreateActivityModalOpen(true)
+  }
+
+  function closeCreateActivityModal() {
+    setIsCreateActivityModalOpen(false)
+  }
+
   return (
     <div className="mx-auto max-w-6xl space-y-8 px-6 py-10">
       <div className="flex h-16 items-center justify-between rounded-xl bg-zinc-900 px-4 shadow-shape">
@@ -38,7 +50,10 @@ export function TripDetailsPage() {
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-semibold">Atividades</h2>
 
-            <button className="flex items-center gap-2 rounded-lg bg-lime-300 px-5 py-2 font-medium text-lime-950 hover:bg-lime-400">
+            <button
+              onClick={openCreateActivityModal}
+              className="flex items-center gap-2 rounded-lg bg-lime-300 px-5 py-2 font-medium text-lime-950 hover:bg-lime-400"
+            >
               <Plus className="size-5" /> Cadastrar atividade
             </button>
           </div>
@@ -109,7 +124,7 @@ export function TripDetailsPage() {
                 <Link2 className="size-5 shrink-0 text-zinc-400" />
               </div>
             </div>
-            <button className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-zinc-800 px-5 font-medium text-zinc-200 hover:bg-zinc-700">
+            <button className="judstify-center flex h-11 w-full items-center gap-2 rounded-lg bg-zinc-800 px-5 font-medium text-zinc-200 hover:bg-zinc-700">
               <Plus className="size-5" />
               Cadastrar novo link
             </button>
@@ -148,6 +163,56 @@ export function TripDetailsPage() {
           </div>
         </div>
       </main>
+
+      {isCreateActivityModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60">
+          <div className="w-[640px] space-y-5 rounded-xl bg-zinc-900 px-6 py-5 shadow-shape">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <h2>Cadastrar atividade</h2>
+                <button onClick={closeCreateActivityModal}>
+                  <X className="size-5 text-zinc-400" />
+                </button>
+              </div>
+              <p className="text-sm text-zinc-400">
+                Todos convidados podem visualizar as atividades.
+              </p>
+            </div>
+
+            <form className="space-y-3">
+              <div className="flex h-14 items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950 px-4">
+                <Tag className="size-5 text-zinc-400" />
+                <input
+                  name="title"
+                  autoComplete="off"
+                  placeholder="Qual a atividade"
+                  className="flex-1 bg-transparent text-lg placeholder-zinc-400 outline-none"
+                />
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="flex h-14 flex-1 items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950 px-4">
+                  <Calendar className="size-5 text-zinc-400" />
+                  <input
+                    type="datetime-local"
+                    name="occurs_at"
+                    autoComplete="off"
+                    placeholder="Data e horário da atividade"
+                    className="flex-1 bg-transparent text-lg placeholder-zinc-400 outline-none"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-lime-300 px-5 font-medium text-lime-950 hover:bg-lime-400"
+              >
+                Salvar atividade
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -1,30 +1,83 @@
-# React + TypeScript + Vite
+# Plann.er | Project of NLW Journey
+[![Banner](./public/cover.jpg)](#)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+With the **Plann.er**, you can create travel plans, invite friends and write down activities to perform during the trip!
 
-Currently, two official plugins are available:
+> Status: Finished... ✅
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies 🚀
 
-## Expanding the ESLint configuration
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Libs 📕
 
-- Configure the top-level `parserOptions` property like this:
+📑 **ZOD**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+📑 **LUCIDE ICONS**
+
+📑 **ESLINT**
+
+📑 **AXIOS**
+
+## Features 💡
+
+✅ **CREATE TRIP**
+
+✅ **INVITE FRIENDS TO TRIP**
+
+✅ **CREATE ACTIVITIES TO TRIP**
+
+## How do use the project ⚙️
+
+### Frontend
+
+#### 1. Clone the repository
+```sh
+git clone https://github.com/reinheimermat/planner-web
+```
+#### 2. install dependencies
+```sh
+pnpm install
+```
+#### 3. Run local project
+```sh
+pnpm run dev
+```
+#### 4. Access the project
+```sh
+http://localhost:5173/
+```
+### Backend
+
+#### 1. Clone the repository
+```sh
+git clone https://github.com/reinheimermat/planner-api
+```
+### 2. Config envoriments
+Rename the file **.env.example** to **.env**
+
+### 3. Install dependencies
+```sh
+pnpm run dev
+```
+### 4. Run create database with Prisma
+```sh
+npx prisma generate 
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 5. Run the project
+```sh
+pnpm run dev
+```
+
+## License 📝
+
+[![licence](https://img.shields.io/github/license/reinheimermat/discover.svg)](https://github.com/Ileriayo/markdown-badges/blob/master/LICENSE)
+
+## Links 🔗
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reinheimermat/)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contatoreinheimer@gmail.com)

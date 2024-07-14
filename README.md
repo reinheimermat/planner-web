@@ -73,11 +73,10 @@ npx prisma generate
 pnpm run dev
 ```
 
+## Links 🔗
+
+[![LinkedIn](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/1392276515495389646)
+
 ## License 📝
 
 [![licence](https://img.shields.io/github/license/reinheimermat/discover.svg)](https://github.com/Ileriayo/markdown-badges/blob/master/LICENSE)
-
-## Links 🔗
-
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reinheimermat/)
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contatoreinheimer@gmail.com)
